@@ -1,0 +1,404 @@
+
+:root {
+    --color-primary: #001d3d;
+    --color-secondary: #021222;
+    --color-text-light: #fff;
+    --box-shadow-color: rgba(0, 0, 0, 0.8);
+}
+.index{
+    background-image: url(Imagenes/LXC-55.jpg);
+    background-size: contain;
+    background-position: top;
+    position: relative;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-color: #011529;
+}
+.titulo { 
+    color: #fff;
+    margin-top: 300px;
+    font-size: 100px;
+    padding-top: 250px;
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+}
+.subtitulo{ 
+    color: #fff;
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+    font-size: medium;
+    padding-bottom: 12px;
+    font-size: 40px;
+}
+
+.parrafo_inicio {
+    width: 80%; 
+    max-width: 800px; 
+    margin: 40px auto 20px; 
+    padding: 20px; 
+    background-color: #001d3d; 
+    color: #fff; 
+    font-size: 20px; 
+    text-align: justify; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.parrafo_inicio p {
+    margin-bottom: 10px;
+}
+
+.opaco {
+    padding: 10px;
+    background-color: #0c112bd5;
+    width: auto;
+    height: auto;
+    
+}
+
+/* -----------> Menu superior de navegacion fijo <----------- */
+
+.nav__navegacion {
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    padding: 2px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.nav__navegacion .nav_link {
+    text-decoration: none;
+    padding: 20px 10px; 
+    color: #fff;
+    font-size: 30px;
+    display: inline-block; 
+    vertical-align: middle;
+    position: relative;
+}
+
+.nav__navegacion .nav_link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: transparent; 
+    z-index: -1; 
+    transition: background-color 0.3s ease;
+    border-radius: 10%;
+}
+
+.nav__navegacion .nav_link:hover::before {
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.logo__container {
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo {
+    height: 102px; 
+    width: auto; 
+    display: block;
+}
+
+/* -----------> Parafo de presentacion <----------- */
+
+.parrafo_inicio {
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.parrafo_inicio.animar {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+@keyframes aparecerDesdeIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.parrafo_inicio.animar-scroll {
+    animation: aparecerDesdeIzquierda 1s ease forwards;
+}
+
+
+@media screen and (max-width: 768px) {
+.parrafo_inicio.animar-scroll {
+    animation: aparecerDesdeIzquierda 0.5s ease forwards;
+}
+}
+.card-body {
+    background-color: #001d3d;
+}
+.card-title{
+    color: #fff !important;
+} 
+.card-text, .text-body-secondary {
+    color: #fff;
+}
+.row {
+    margin-top: 20px; 
+}
+
+.title_eventos, .title_actividades , .title_clubes , .sub_title_clubes, .h2_actividades_page1{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+p{
+    color: #fff;
+    text-align: center;
+    
+}
+.content__eventos{
+    width: 285px;
+    height: 570px;
+    background-color: #001d3d;
+    display: inline-flex;
+    margin: 15px;
+    align-items: top;
+    padding-top: 5px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.imagen_card_evento{
+    max-width: 95%;
+    max-height: 295px;
+    border-radius: 15px;
+}
+.card-title_evento_ , .card_paraffafo_evento {
+    color: #fff;
+    text-overflow: ellipsis;
+}
+.card_paraffafo_evento {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* -----------> Boton Avisarme <----------- */
+
+button {
+    background-color: #001d3d;
+}
+
+
+.form_btn_a a {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid var(--color-text-light);
+    border-radius: 4px;
+}
+.form_btn_a{
+    border: none;
+
+}
+
+.img_club {
+    width:400px ;
+    height: 400px;
+    padding-right: 0px;
+}
+
+/* -----------> Actividad <----------- */
+.active {
+    opacity: 0.8;
+    padding-top: 40px;
+}
+
+/* ---------> Clubes y Comunidades <--------- */
+
+.clubes_{
+    display: inline-block;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.div_img_juegosDem¿Mesa{
+    width: 505px;
+    height: 505px;
+    background-color: #001d3d;
+    border-radius: 5px;
+    margin-left: 15px;
+    display: inline;
+}
+.img-juegosDeMesa{
+    width: 495px;
+    height: 495px;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-left: 15px;
+    opacity: 0.8;
+    display: inline-block;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    
+}
+
+.img-juegosDeMesa:hover {
+    width: 515px;
+    height: 515px;
+}
+
+/* ---------> Footer <-------- */
+.contactp_footer {
+    text-align: center;
+    background-color: #021222;
+    color: #fff;
+    width: 1600px;
+    height: 200px;
+    z-index: 1000;
+    padding-top: 40px;
+    margin: 0px;
+
+}
+
+.div_a_icons {
+    padding-top: 15px;
+}
+.a_icons {
+    padding-left: 20px;
+}
+
+/* ------> Ventana Modal <------ */ 
+
+.body_modal {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input, .input_enviar, label, select {
+    display: block;
+    margin: 15px auto;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--color-primary); 
+    color: #fff;
+
+}
+label {
+    color: var(--color-text-light);
+}
+
+select {
+    background-color: var(--color-primary); 
+    color: var(--color-text-light); 
+}
+
+/* dentro del menú desplegable */
+option {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-light);
+}
+
+.input_enviar:hover {
+    background-color: #72abe9f6; 
+}
+
+.input:focus, select:focus {
+    border-color: var(--color-secondary); 
+    outline: none; 
+}
+
+dialog {
+    margin-top: 70px;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 26px 35px 77px 0px rgba(0,0,0,0.87);
+}
+
+.h1_form, .h2_form {
+    color: var(--color-text-light);
+    text-align: center; 
+    margin: 10px 0;
+}
+
+.h1_form {
+    font-size: 2em; 
+    margin-top: 0;
+}
+
+.h2_form {
+    font-size: 1.5em; 
+    margin-bottom: 20px;
+}
+
+/* ---------> CLUB <--------- */ 
+.opaco1{
+    padding: 10px;
+    background-color: #0c112bd5;
+    width: auto;
+    height: 200vh;
+    
+}
+
+.titulo_h1_club{
+    color: #fff;
+    margin-top: 300px;
+    font-size: 100px;
+    padding-top: 150px;
+    text-align: center;
+    font-family: "archivo black", sans-serif;
+}
+
+.index_club{
+    background-image: url(Imagenes/fondoClubDeJuegos.jpg);
+    background-size: cover;
+    background-position: top;
+    position: center;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-color: #011529;
+    opacity: rgba(0, 0, 0, 0.968);
+    height: 90vh;
+    width: 100%;
+    position: relative;
+}
+.img_club_juegos {
+    width: 360px;
+    height: 360px;
+    margin-top: 130px;
+    border-radius: 2%;
+    margin-left: 25px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.img_club_juegos:hover {
+    transform: scale(1.1);
+}

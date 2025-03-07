@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos De Mesa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&display=swap" rel="stylesheet">
+    <meta name="keywords" content="Anime, Videojuegos, Juegos de mesa, Peleas medievales, Juegos de cartas TCG">
+    <script src="java.js"></script>
+</head>
+<body class="index_club">
+    <nav class="nav__navegacion">
+        <div class="logo__container">
+            <img src="Imagenes/logo31.png" alt="Logo de Luxana" class="logo">
+        </div>
+        <a class="nav_link" href="/WebLuxana/index.html#inicio">Inicio</a>
+        <a class="nav_link" href="/WebLuxana/index.html#eventos">Eventos</a>
+        <a class="nav_link" href="/WebLuxana/index.html#actividades">Actividades</a>
+        <a class="nav_link" href="/WebLuxana/index.html#contacto">Contacto</a>
+    </nav>
+
+    <div class="opaco1">
+        <h1 class="titulo_h1_club">Bienvenidos al Club Dados y Tableros</h1>
+        <h2 class="subtitulo">Luxana San Justo, Santa Fe</h2>
+        <div class="parrafo_inicio">
+            <p>Somos una comunidad apasionada por el anime, los videojuegos y los juegos de mesa, ubicada en San Justo, Santa Fe, Argentina. Desde nuestros inicios, hemos trabajado incansablemente para crear un espacio donde los fanáticos puedan reunirse, compartir su amor por estos hobbies y vivir experiencias inolvidables.</p>
+        </div>
+
+        <div>
+            <img class="img_club_juegos" src="/WebLuxana/Imagenes/juegosdemesa.jpeg" alt="juegos de mesa">
+            <img class="img_club_juegos" src="/WebLuxana/Imagenes/dado1.jpeg" alt="dados">
+            <img class="img_club_juegos" src="/WebLuxana/Imagenes/dado2.jpeg" alt="dados">
+            <img class="img_club_juegos" src="/WebLuxana/Imagenes/dado3.jpeg" alt="dados">
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-primary gb-black" data-bs-toggle="modal" data-bs-target="#agregarEditarModal">
+            Agregar Juego de Mesa 
+        </button>
+    </div>
+
+    <main class="container" id="contenedorJuegos"></main>
+
+    <!-- Modal Agregar/Editar Juego -->
+    <div class="modal fade" id="agregarEditarModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">¿Qué juego querés que tengamos en nuestro Club?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="agregarForm">
+                        <input type="hidden" id="txtId">
+    
+                        <label for="txtNombreDelJuego" class="form-label">Nombre del Juego</label>
+                        <input type="text" id="txtNombreDelJuego" class="form-control mb-3" required>
+    
+                        <label for="txtCantidadDeJugadores" class="form-label">Cantidad de Jugadores</label>
+                        <input type="number" id="txtCantidadDeJugadores" class="form-control mb-3" required>
+    
+                        <label for="txtTiempoDeJuego" class="form-label">Tiempo de Juego (minutos)</label>
+                        <input type="number" id="txtTiempoDeJuego" class="form-control mb-3" required>
+    
+                        <label for="txtImgUrl" class="form-label">Imagen URL</label>
+                        <input type="url" id="txtImgUrl" class="form-control mb-3">
+    
+                        <button type="submit" id="botonAgregar" class="btn btn-primary">Añadir</button>
+                        <button type="submit" id="botonEditar" class="btn btn-warning d-none">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container" id="contenedorJuegos">
+
+    </main>
+    
+</body>
+</html>

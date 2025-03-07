@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body class="body_modal">
+    <div>
+        <dialog open="modal">
+            <form id="formulario">
+                <h1 class="h1_form">¡Únete a Nosotros!</h1>
+                <h2 class="h2_form">Suscríbete para recibir las últimas novedades de Luxana</h2>
+                <input required id="nombreInput" class="input" type="text" placeholder="Nombre y Apellido">
+                <label for="optionsInput">Selecciona el evento al que deseas asistir</label>
+                <select id="optionsInput" name="options">
+                    <option class="option2" value="opcion1">Festejo de la niñez</option>
+                    <option class="option2" value="opcion2">Escuela Play</option>
+                    <option class="option2" value="opcion3">Enadrya</option>
+                    <option class="option2" value="opcion4">Juegos en la plaza</option>
+                    <option class="option2" value="opcion5">Players Night</option>
+                </select>
+                <input required id="emailInput" class="input" type="email" placeholder="Correo Electronico">
+                <button type="submit" class="input_enviar">Enviar</button>
+            </form>
+        </dialog>
+    </div>
+    <script src="java.js"></script>
+</body>
+
+</html>
